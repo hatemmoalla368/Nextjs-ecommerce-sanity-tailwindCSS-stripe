@@ -1,5 +1,5 @@
 'use client'
-
+import { loadStripe } from "@stripe/stripe-js"
 import { CartProvider as CProvider } from "use-shopping-cart"
 
 const Cartprovider = ({children}) => {
@@ -12,8 +12,8 @@ const Cartprovider = ({children}) => {
     mode="payment"
     cartMode="client-only"
     stripe={process.env.NEXT_PUBLIC_STRIPE_KEY} 
-    successUrl="https://nextjs-ecommerce-sanity-tailwindcss.onrender.com/stripe/success"
-    cancelUrl="https://nextjs-ecommerce-sanity-tailwindcss.onrender.com/stripe/error"
+    successUrl="https://nextjs-ecommerce-sanity-tailwindcss.onrender.com//stripe/success"
+    cancelUrl="http://localhost:3000/stripe/error"
     language="en-US"
     currency="USD"
     billingAddressCollection={true}

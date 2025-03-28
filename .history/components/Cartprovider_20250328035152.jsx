@@ -1,5 +1,5 @@
 'use client'
-
+import { loadStripe } from "@stripe/stripe-js"
 import { CartProvider as CProvider } from "use-shopping-cart"
 
 const Cartprovider = ({children}) => {
